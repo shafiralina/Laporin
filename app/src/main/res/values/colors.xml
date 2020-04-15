@@ -4,4 +4,15 @@
     <color name="colorPrimaryDark">#b18df1</color>
     <color name="colorAccent">#e0e0e0</color>
     <color name="textColorWhite">#FFFFFF</color>
+
+    <!--<color name="colorPrimary">#FFC107</color>-->
+    <!--<color name="colorPrimaryDark">#FFA000</color>-->
+    <color name="backgroundcolor">#0e0e0e</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="pink">#FF4081</color>
+    <color name="red">#ff4040</color>
+
 </resources>
