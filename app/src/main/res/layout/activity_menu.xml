@@ -81,14 +81,17 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp">
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/layout_jalan_raya"
+                    >
 
                     <LinearLayout
                         android:layout_width="150dp"
                         android:layout_height="160dp"
                         android:background="@drawable/menu4"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -104,7 +107,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:id="@+id/layout_lampu">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -135,7 +139,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
-                    android:layout_marginRight="5dp">
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/layout_sampah">
 
                     <LinearLayout
                         android:layout_width="290dp"
@@ -205,7 +210,8 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="3dp">
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/layout_kejahatan">
 
                     <LinearLayout
                         android:layout_width="match_parent"

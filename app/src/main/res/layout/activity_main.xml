@@ -22,7 +22,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/custom_button1"
         android:text="LAPORIN"
         android:textColor="@color/textColorWhite"
