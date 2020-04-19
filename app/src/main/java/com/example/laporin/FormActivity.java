@@ -18,8 +18,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.Editable;
 import android.text.Layout;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -39,7 +42,7 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
     TextView textForm, textGambar;
     Spinner spinner;
     Button buttonCek, buttonKirimLaporan, buttonKamera;
-    EditText formKoordinat;
+    EditText formKoordinat, namaPelapor, noHandphone;
     ImageView gambarFoto;
     private Uri file;
 
@@ -139,8 +142,20 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
 
         textGambar = findViewById(R.id.textGambar);
 
+        namaPelapor = findViewById(R.id.edt_namaPelapor);
+        namaPelapor.addTextChangedListener(loginTextWatcher);
+
+        noHandphone = findViewById(R.id.edt_NoHandphone);
+        noHandphone.addTextChangedListener(loginTextWatcher);
         formKoordinat = findViewById(R.id.edt_koordinat);
 
+        //untuk inisialiasai, tombol awal tidak aktif
+        buttonCek.setEnabled(false); buttonCek.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        buttonKamera.setEnabled(false); buttonKamera.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        buttonKirimLaporan.setEnabled(false); buttonKirimLaporan.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+
+        //untuk ijin kamera device
+        ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
     }
 
     @Override
@@ -151,10 +166,11 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.buttonKirimLaporan:
-                CharSequence text = "Aplikasi sedang dalam pengembangan";
+                CharSequence text = "Aplikasi dalam pengembangan. Hubungi www.bgroup.id";
                 int duration = Toast.LENGTH_SHORT;
 
                 Toast toast = Toast.makeText(this, text, duration);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);
                 toast.show();
                 break;
 
@@ -234,5 +250,38 @@ public class FormActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
+
+    private TextWatcher loginTextWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String usernameInput = namaPelapor.getText().toString().trim();
+            String passwordInput = noHandphone.getText().toString().trim();
+
+            buttonCek.setEnabled(!usernameInput.isEmpty() && !passwordInput.isEmpty());
+            buttonKamera.setEnabled(!usernameInput.isEmpty() && !passwordInput.isEmpty());
+            buttonKirimLaporan.setEnabled(!usernameInput.isEmpty() && !passwordInput.isEmpty());
+
+            if(!buttonCek.isEnabled()){
+                buttonCek.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                buttonKamera.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+                buttonKirimLaporan.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+            }else {
+                buttonCek.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                buttonKamera.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                buttonKirimLaporan.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            }
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
 }

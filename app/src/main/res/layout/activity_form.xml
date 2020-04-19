@@ -82,7 +82,7 @@
                         android:textColor="#000000" />
 
                     <EditText
-                        android:id="@+id/edt_length"
+                        android:id="@+id/edt_namaPelapor"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:paddingLeft="10dp"
@@ -90,12 +90,12 @@
                         android:layout_height="40dp"
                         android:background="@color/lightgray"
                         android:inputType="text"
-                        android:hint="Nama pelapor"
+                        android:hint="Nama pelapor (Wajib diisi)"
                         android:textSize="15dp"
                         android:lines="1" />
 
                     <EditText
-                        android:id="@+id/edt_length1"
+                        android:id="@+id/edt_NoHandphone"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
@@ -104,7 +104,7 @@
                         android:layout_height="40dp"
                         android:background="@color/lightgray"
                         android:inputType="number"
-                        android:hint="No Handphone"
+                        android:hint="No Handphone (Wajib diisi)"
                         android:textSize="15dp"
                         android:lines="1" />
 
@@ -189,6 +189,8 @@
                         android:minWidth="0dp"
                         android:textColor="@color/textColorWhite" />
 
+
+
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
@@ -197,13 +199,14 @@
                             android:id="@+id/gambar_hasil"
                             android:layout_width="match_parent"
                             android:layout_height="450dp"
+                            android:maxHeight="450dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginLeft="20dp"
                             android:layout_marginRight="20dp"
-                            android:layout_marginBottom="10dp"
-                            android:background="@color/colorPrimary"
-
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/lightgray"
                             />
+
                         <TextView
                             android:id="@+id/textGambar"
                             android:layout_width="wrap_content"
