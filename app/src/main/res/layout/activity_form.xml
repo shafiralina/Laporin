@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@color/backgroundcolor"
     android:orientation="vertical"
     tools:context=".FormActivity">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/textColorWhite"
+        android:layout_above="@id/text_buttom_form"
         >
 
         <LinearLayout
@@ -29,12 +31,25 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
-                    android:layout_margin="0dp">
+                    android:layout_margin="0dp"
+                    android:id="@+id/headerPicture"
+
+
+                    >
                     <RelativeLayout
                         android:id="@+id/hedaerMenu"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="@color/lightgray"
+
                         android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/backgroundcolor"
+                            android:alpha="0.7"
+                            />
 
                         <ImageView
                             android:id="@+id/logo"
@@ -51,33 +66,187 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@id/headerPicture"
+                    android:background="@color/textColorWhite"
+                    >
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/textForm"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Panjang" />
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        tools:text="judul"
+                        android:textColor="#000000" />
 
                     <EditText
                         android:id="@+id/edt_length"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="numberDecimal"
+                        android:layout_height="40dp"
+                        android:background="@color/lightgray"
+                        android:inputType="text"
+                        android:hint="Nama pelapor"
+                        android:textSize="15dp"
                         android:lines="1" />
+
+                    <EditText
+                        android:id="@+id/edt_length1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/lightgray"
+                        android:inputType="number"
+                        android:hint="No Handphone"
+                        android:textSize="15dp"
+                        android:lines="1" />
+
+                    <EditText
+                        android:id="@+id/edt_length2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/lightgray"
+                        android:inputType="text"
+                        android:hint="Jenis Masalah"
+                        android:textSize="15dp"
+                        android:lines="1" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textSize="15dp"
+                        android:background="@drawable/spinner_background"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_length3"
+                        android:paddingTop="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@color/lightgray"
+                        android:inputType="text"
+                        android:hint="Detail Masalah"
+                        android:textSize="15dp"
+                        android:gravity="left"
+                        android:lines="1" />
+
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edt_koordinat"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="0dp"
+                            android:paddingLeft="10dp"
+                            android:layout_width="220dp"
+                            android:layout_height="40dp"
+                            android:background="@color/lightgray"
+                            android:inputType="text"
+                            android:hint="Koordinat Lokasi"
+                            android:focusable="false"
+                            android:textSize="15dp"
+                            android:lines="1" />
+
+                        <Button
+                            android:id="@+id/buttonCek"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="20dp"
+                            android:background="@drawable/custom_button1"
+                            android:paddingRight="20dp"
+                            android:text="Cek"
+                            android:textColor="@color/textColorWhite" />
+
+                    </TableRow>
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="65dp"
+                        android:background="@drawable/custom_button1"
+                        android:drawableLeft="@drawable/ic_photo_camera_black_24dp"
+                        android:text="Kirim Gambar"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:minWidth="0dp"
+                        android:textColor="@color/textColorWhite" />
+
+                    <Button
+                        android:id="@+id/buttonKirimLaporan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="0dp"
+                        android:background="@drawable/custom_button1"
+                        android:paddingRight="0dp"
+                        android:text="Kirim Laporan"
+                        android:textColor="@color/textColorWhite" />
 
                 </LinearLayout>
 
-
             </RelativeLayout>
-
-
-
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
+    <TextView
+        android:id="@+id/text_buttom_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="43dp"
+        android:text="Powered by"
+        android:textColor="@color/textColorWhite" />
 
+    <ImageView
+        android:id="@+id/image_buttom"
+        android:layout_width="157dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="6dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/layer1" />
 
 
 </RelativeLayout>

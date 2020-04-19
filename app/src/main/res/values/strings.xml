@@ -1,4 +1,41 @@
 <resources>
     <string name="app_name">Laporin</string>
     <string name="title_activity_menu">Menu</string>
+
+    <string-array name="masalahJalan">
+        <item>Jalan Rusak</item>
+        <item>Jalan Ditutup Tanpa Ijin</item>
+        <item>Marka Jalan</item>
+        <item>Rambu Rambu</item>
+        <item>Traffic Light</item>
+        <item>Masalah Lain</item>
+    </string-array>
+
+    <string-array name="masalahPenerangan">
+        <item>Lampu Jalan Mati</item>
+        <item>Lampu Jalan Berkedip</item>
+        <item>Lampu Jalan Redup</item>
+        <item>Lampu Jalan Hilang</item>
+        <item>Tiang Lampu Rusak</item>
+        <item>Masalah Lain</item>
+    </string-array>
+
+    <string-array name="masalahKebersihan">
+        <item>Sampah di Jalan</item>
+        <item>Buang sampah</item>
+        <item>Sampah di Sungai</item>
+        <item>Selokan Banyak Sampah</item>
+        <item>Petugas Sampah</item>
+        <item>Masalah Lain</item>
+    </string-array>
+
+    <string-array name="masalahKriminal">
+        <item>Anak Jalanan</item>
+        <item>Pengemis</item>
+        <item>Pemalakan</item>
+        <item>Penipuan</item>
+        <item>Pencurian</item>
+        <item>Pungutan Liar</item>
+        <item>Masalah Lain</item>
+    </string-array>
 </resources>
